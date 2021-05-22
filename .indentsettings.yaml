@@ -1,0 +1,11 @@
+modifyLineBreaks:
+  textWrapOptions:
+    columns: 79
+    perCodeBlockBasis: 1
+    all: 1
+  removeParagraphLineBreaks:
+    all:
+      except:
+        - logicproof
+        - subproof
+    beforeTextWrap: 1
