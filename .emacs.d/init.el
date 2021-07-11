@@ -3,6 +3,8 @@
 
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
+(setq backup-by-copying t)
+
 ;; (require 'which-key)
 (add-hook 'after-init-hook 'which-key-mode)
 
@@ -27,6 +29,11 @@
 ;; (require 'flyspell)
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
+
+(setq projectile-project-search-path '("~/repos"))
+(add-hook 'after-init-hook 'projectile-mode)
+(with-eval-after-load 'projectile
+  (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map))
 
 ;; (require 'lsp-mode)
 (setq lsp-idle-delay 0.1)
@@ -60,11 +67,6 @@
 ;; (require 'latex)
 (setq LaTeX-electric-left-right-brace t)
 (add-hook 'LaTeX-mode-hook 'turn-on-auto-fill)
-
-(setq projectile-project-search-path '("~/repos"))
-(add-hook 'after-init-hook 'projectile-mode)
-(with-eval-after-load 'projectile
-  (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map))
 
 (put 'narrow-to-region 'disabled nil)
 (put 'narrow-to-page 'disabled nil)
