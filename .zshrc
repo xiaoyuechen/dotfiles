@@ -77,10 +77,13 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # zsh-autosuggestions configuration
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=10,underline"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=10"
 
 # start gnome terminal in the working directory
 source /etc/profile.d/vte.sh
+
+# custom key bindings
+bindkey '^W' kill-region
 
 # export MANPATH="/usr/local/man:$MANPATH"
 

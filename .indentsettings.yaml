@@ -1,3 +1,8 @@
+removeTrailingWhitespace:
+    beforeProcessing: 1
+    afterProcessing: 1
+noAdditionalIndent:
+    frame: 1
 modifyLineBreaks:
   textWrapOptions:
     columns: 79
