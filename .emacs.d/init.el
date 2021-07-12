@@ -35,6 +35,8 @@
 (with-eval-after-load 'projectile
   (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map))
 
+(setq vterm-buffer-name-string "vterm %s")
+
 ;; (require 'lsp-mode)
 (setq lsp-idle-delay 0.1)
 (add-hook 'lsp-mode-hook 'lsp-enable-which-key-integration)

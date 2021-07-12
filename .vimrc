@@ -19,6 +19,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
+Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'valloric/youcompleteme'
 Plug 'chiel92/vim-autoformat'
@@ -26,8 +27,6 @@ Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'majutsushi/tagbar'
 Plug 'lervag/vimtex'
-Plug 'vhdirk/vim-cmake'
-Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 " c file indent settings
