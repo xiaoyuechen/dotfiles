@@ -85,6 +85,10 @@ source /etc/profile.d/vte.sh
 # custom key bindings
 bindkey '^W' kill-region
 
+# init comp
+autoload -U compinit
+compinit -i
+
 # vterm settings
 vterm_printf(){
     if [ -n "$TMUX" ] && ([ "${TERM%%-*}" = "tmux" ] || [ "${TERM%%-*}" = "screen" ] ); then
@@ -134,3 +138,6 @@ PROMPT=$PROMPT'%{$(vterm_prompt_end)%}'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# opam configuration
+test -r /home/xchen/.opam/opam-init/init.zsh && . /home/xchen/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
